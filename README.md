@@ -19,7 +19,7 @@ to stop the solution iteration.
 There are 4 variables needed to setup a new mesh problem: dofs, edofs, coords,
 and bdyNodes. This nomenclature is from calfem, a mesh generation code available
 from github.com.  It is based in the solid mechanics area. 
-  1. dofs - (degrees of freedom) contains the node numbers with a "marker", here "0" is used.
+  1. dofs - (degrees of freedom) contains the node numbers. 
      Node numbering should first list all boundary nodes; then the internal
      nodes.
   2. edof - (element degrees of freedom) contains the node numbers for each
