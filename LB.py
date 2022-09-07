@@ -619,8 +619,9 @@ N = 16  # number of nodes
 
 # Nodes are numbered with boundary nodes first in CCW order, then internal nodes
 # The "0" in second column is a marker to be consistent with calfem dofs.
-dofs = np.array([[1,0],[2,0],[3,0],[4,0],[5,0],[6,0],[7,0],[8,0],[9,0],[10,0],[11,0],[12,0],[13,0],[14,0],[15,0],[16,0]],dtype=int)
-#print(dofs)
+#dofs = np.array([[1,0],[2,0],[3,0],[4,0],[5,0],[6,0],[7,0],[8,0],[9,0],[10,0],[11,0],[12,0],[13,0],[14,0],[15,0],[16,0]],dtype=int)
+dofs = np.array([[1],[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12],[13],[14],[15],[16]],dtype=int)
+print(dofs)
 
 edof = np.array([[1,2,13,12],	
                  [2,3,14,13],
@@ -661,18 +662,18 @@ print("\n")
 bdyNodes = [1,2,3,4,5,6,7,8,9,10,11,12]
 BN = len(bdyNodes)
 """
+#"""
 # Test 2:
 print("Element nodes:")
 E = 16  # number of elements
 N = 25  # number of nodes
 
 # Nodes (i.e., dofs) are numbered with boundary nodes first in CCW order, then internal nodes
-# The "0" in second column is a marker to be consistent with calfem dofs.
-dofs = np.array([[1,0],[2,0],[3,0],[4,0],[5,0],
-                 [6,0],[7,0],[8,0],[9,0],[10,0],
-                 [11,0],[12,0],[13,0],[14,0],[15,0],
-                 [16,0],[17,0],[18,0],[19,0],[20,0],
-                 [21,1],[22,0],[23,0],[24,0],[25,0]],dtype=int)
+dofs = np.array([[1],[2],[3],[4],[5],
+                 [6],[7],[8],[9],[10],
+                 [11],[12],[13],[14],[15],
+                 [16],[17],[18],[19],[20],
+                 [21],[22],[23],[24],[25]],dtype=int)
 #print(dofs)
 
 edof = np.array([[1,2,17,16],	
@@ -732,7 +733,7 @@ showMeshPlot(coords, edof, True)
 bdyNodes = dofs[:16,0]
 print("bdyNodes: ", bdyNodes)
 BN = len(bdyNodes)
-
+#"""
 print("edof: \n", edof)
 print("\n")
 
