@@ -1,3 +1,9 @@
+'''
+ This code is based on the website:
+ https://stackoverflow.com/questions/52202014/how-can-i-plot-2d-fem-results-using-matplotlib.
+
+ Thanks for this tool.
+'''
 
 import matplotlib.pyplot as plt
 import matplotlib.tri as tri

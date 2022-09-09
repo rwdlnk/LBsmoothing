@@ -618,9 +618,10 @@ E = 9  # number of elements
 N = 16  # number of nodes
 
 # Nodes are numbered with boundary nodes first in CCW order, then internal nodes
-# The "0" in second column is a marker to be consistent with calfem dofs.
-#dofs = np.array([[1,0],[2,0],[3,0],[4,0],[5,0],[6,0],[7,0],[8,0],[9,0],[10,0],[11,0],[12,0],[13,0],[14,0],[15,0],[16,0]],dtype=int)
-dofs = np.array([[1],[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12],[13],[14],[15],[16]],dtype=int)
+dofs = np.array([[1],[2],[3],[4],
+                 [5],[6],[7],[8],
+                 [9],[10],[11],[12],
+                 [13],[14],[15],[16]], dtype=int)
 print(dofs)
 
 edof = np.array([[1,2,13,12],	
@@ -631,7 +632,7 @@ edof = np.array([[1,2,13,12],
                  [15,6,7,8],	
                  [13,14,15,16],	
                  [12,13,16,11],	
-                 [11,16,9,10]],dtype=int)	
+                 [11,16,9,10]], dtype=int)	
 
 # Consistent with dofs sequence!
 coords = np.array([[0,0],
@@ -649,7 +650,7 @@ coords = np.array([[0,0],
                    [1,1],
                    [2,1],
                    [2,2],
-                   [1,2]],dtype=float)
+                   [1,2]], dtype=float)
 
 print("Initial coords:")
 for coord in coords:
@@ -673,7 +674,7 @@ dofs = np.array([[1],[2],[3],[4],[5],
                  [6],[7],[8],[9],[10],
                  [11],[12],[13],[14],[15],
                  [16],[17],[18],[19],[20],
-                 [21],[22],[23],[24],[25]],dtype=int)
+                 [21],[22],[23],[24],[25]], dtype=int)
 #print(dofs)
 
 edof = np.array([[1,2,17,16],	
@@ -691,7 +692,7 @@ edof = np.array([[1,2,17,16],
                  [18,21,22,19],
                  [19,22,11,12],
                  [22,25,10,11],	
-                 [25,8,9,10]],dtype=int)	
+                 [25,8,9,10]], dtype=int)	
 
 # Consistent with dofs sequence!
 coords = np.array([[0,0],
@@ -718,7 +719,7 @@ coords = np.array([[0,0],
                    [2.5,3.3],
                    [3.0,1.2],
                    [3.0,2.6],
-                   [3.0,3.2]],dtype=float)
+                   [3.0,3.2]], dtype=float)
 
 print("Initial coords:")
 for coord in coords:
@@ -734,6 +735,7 @@ bdyNodes = dofs[:16,0]
 print("bdyNodes: ", bdyNodes)
 BN = len(bdyNodes)
 #"""
+
 print("edof: \n", edof)
 print("\n")
 
